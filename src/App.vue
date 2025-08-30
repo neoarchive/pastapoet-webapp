@@ -9,11 +9,9 @@
 
       <!-- Main Content -->
       <div id="content" class="p-4 flex-grow-1">
-        <Hero />
-        
-        <PastaCarousel :sides="pastaSlides" />
-        <AboutSection></AboutSection>
-        <Footer></Footer>
+        <transition name='fade' mode="out-in">
+          <router-view></router-view>
+        </transition>
       </div>
     </div>
   </div>
@@ -22,25 +20,17 @@
 <script>
 import Navbar from './components/Navbar.vue';
 import Sidebar from './components/Sidebar.vue';
-import Hero from './components/Hero.vue';
-import PastaCarousel from './components/PastaCarousel.vue';
-import AboutSection from './components/AboutSection.vue';
-import Footer from './components/Footer.vue';
 
 export default {
   name: "App",
   components: {
     Navbar,
     Sidebar,
-    Hero,
-    PastaCarousel,
-    AboutSection,
-    Footer,
   },
   data() {
     return {
       isCollapsed: true,
-    };
+    }
   },
   methods: {
     toggleSidebar(){

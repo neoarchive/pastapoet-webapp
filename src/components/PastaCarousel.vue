@@ -45,6 +45,8 @@
 </template>
 
 <script>
+import pastaImg from '../assets/pasta1.jpg';
+
 export default {
   name: "PastaCarousel",
   data() {
@@ -53,22 +55,22 @@ export default {
         {
           name: "Spaghetti Carbonara",
           desc: "Classic Roman pasta with eggs, cheese, pancetta, and pepper.",
-          img: "src/assets/pasta1.jpg",
+          img: pastaImg,
         },
         {
           name: "Penne Arrabiata",
           desc: "Spicy tomato sauce with garlic and red chili peppers.",
-          img: "src/assets/pasta1.jpg",
+          img: pastaImg,
         },
         {
           name: "Fettuccine Alfredo",
           desc: "Creamy pasta with butter and parmesan.",
-          img: "src/assets/pasta1.jpg",
+          img: pastaImg,
         },
         {
           name: "Lasagna",
           desc: "Layers of pasta, ragù, béchamel, and cheese.",
-          img: "src/assets/pasta1.jpg",
+          img: pastaImg,
         },
         {
           name: "Ravioli",
