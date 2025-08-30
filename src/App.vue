@@ -12,6 +12,7 @@
         <transition name='fade' mode="out-in">
           <router-view></router-view>
         </transition>
+        <Footer />
       </div>
     </div>
   </div>
@@ -20,12 +21,14 @@
 <script>
 import Navbar from './components/Navbar.vue';
 import Sidebar from './components/Sidebar.vue';
+import Footer from './components/Footer.vue';
 
 export default {
   name: "App",
   components: {
     Navbar,
     Sidebar,
+    Footer,
   },
   data() {
     return {
