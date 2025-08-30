@@ -5,7 +5,7 @@
             <router-link to="/" class="nav-link">Home</router-link>
             <router-link to="/order" class="nav-link">Order</router-link>
             <router-link to="/contact" class="nav-link">Contact</router-link>
-            <router-link to="/cart" class="nav-link">Cart</router-link>
+            <!-- <router-link to="/cart" class="nav-link">Cart</router-link>-->
 
           </nav>
           <div class="sidebar-social mt-auto p-3 text-center">
