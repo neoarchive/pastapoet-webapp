@@ -98,3 +98,7 @@ body {
 .fade-enter-to, .fade-leave-from {
   opacity: 1;
 }
+
+.cursive {
+  font-family: "Style Script", cursive;
+}
