@@ -1,31 +1,21 @@
 <template>
-  <div
-    id="sidebar"
-    :class="{ collapsed: collapsed }"
-    class="d-flex flex-column p-3"
-  >
-    <ul class="nav flex-column mb-auto">
-      <li class="nav-item">
-        <a href="#" class="nav-link">Home</a>
-      </li>
-      <li>
-        <a href="#" class="nav-link">Menu</a>
-      </li>
-      <li>
-        <a href="#" class="nav-link">About</a>
-      </li>
-      <li>
-        <a href="#" class="nav-link">Contact</a>
-      </li>
-    </ul>
-
-    <!-- Social Media -->
-    <div class="sidebar-social mt-auto">
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-    </div>
-  </div>
+        <div id="sidebar" class="bg-dark d-flex flex-column" :class="{ collapsed: collapsed }">
+          <h4 class="p-3">Menu</h4>
+          <nav class="nav flex-column">
+            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="#">Our Pasta</a>
+            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#">Contact</a>
+          </nav>
+          <div class="sidebar-social mt-auto p-3 text-center">
+            <a href="https://www.instagram.com/thepastapoetuk/" target="_blank" class="text-light me-3">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="#" class="text-light me-3">
+              <i class="fab fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
 </template>
 
 <script>

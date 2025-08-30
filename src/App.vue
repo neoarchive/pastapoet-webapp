@@ -1,18 +1,19 @@
 <template>
-  <div class="d-flex flex-column min-vh-100">
+  <div id="app" class="d-flex flex-column min-vh-100">
     <!-- Navbar -->
-    <NavbarComponent @toggle="toggleSidebar" />
+    <Navbar @toggle="toggleSidebar" />
 
     <div class="d-flex flex-grow-1">
       <!-- Sidebar -->
-      <SidebarComponent :collapsed="isCollapsed" />
+      <Sidebar :collapsed="isCollapsed" />
 
       <!-- Main Content -->
       <div id="content" class="p-4 flex-grow-1">
-        <HeroSection />
-        <PastaCarousel />
-        <AboutSection />
-        <FooterComponent />
+        <Hero />
+        
+        <PastaCarousel :sides="pastaSlides" />
+        <AboutSection></AboutSection>
+        <Footer></Footer>
       </div>
     </div>
   </div>
@@ -27,17 +28,18 @@ import AboutSection from './components/AboutSection.vue';
 import Footer from './components/Footer.vue';
 
 export default {
+  name: "App",
   components: {
-    NavbarComponent,
-    SidebarComponent,
-    HeroSection,
+    Navbar,
+    Sidebar,
+    Hero,
     PastaCarousel,
     AboutSection,
-    FooterComponent,
+    Footer,
   },
   data() {
     return {
-      isCollapsed: true,
+      isCollapsed: false,
     };
   },
   methods: {
@@ -47,3 +49,7 @@ export default {
   },
 };
 </script>
+
+<style>
+@import "./style.css";
+</style>

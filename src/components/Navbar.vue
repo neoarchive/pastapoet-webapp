@@ -1,10 +1,10 @@
 <template>
-  <nav class="navbar navbar-dark px-3">
-    <button class="toggle-btn" @click="$emit('toggle')">
-      <i class="fas fa-bars"></i>
-    </button>
-    <a class="navbar-brand ms-3" href="#">PastaPoet</a>
-  </nav>
+          <nav class="navbar navbar-dark">
+          <div class="container-fluid">
+            <button class="btn toggle-btn" @click="$emit('toggle')">☰</button>
+            <a class="navbar-brand ms-3" href="#">The Pasta Poet</a>
+          </div>
+        </nav>
 </template>
 
 <script>
