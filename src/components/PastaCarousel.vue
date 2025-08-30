@@ -75,12 +75,12 @@ export default {
         {
           name: "Ravioli",
           desc: "Pasta pockets filled with ricotta and spinach.",
-          img: "src/assets/pasta1.jpg",
+          img:  pastaImg,
         },
         {
           name: "Tortellini",
           desc: "Ring-shaped pasta filled with meat and cheese.",
-          img: "src/assets/pasta1.jpg",
+          img: pastaImg,
         },
       ],
     };

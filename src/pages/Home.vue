@@ -2,18 +2,21 @@
     <div>
       <Hero />
       <PastaCarousel :slides="pastaSlides" />
+      <AboutSection />
     </div>
   </template>
   
   <script>
   import Hero from '../components/Hero.vue'
   import PastaCarousel from '../components/PastaCarousel.vue'
+  import AboutSection from '../components/AboutSection.vue'
   
   export default {
     name: 'Home',
     components: {
       Hero,
-      PastaCarousel
+      PastaCarousel,
+      AboutSection
     },
     data() {
       return {
