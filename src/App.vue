@@ -5,7 +5,7 @@
 
     <div class="d-flex flex-grow-1">
       <!-- Sidebar -->
-      <Sidebar :collapsed="isCollapsed" />
+      <Sidebar :collapsed="isCollapsed"></Sidebar>
 
       <!-- Main Content -->
       <div id="content" class="p-4 flex-grow-1">
@@ -39,13 +39,13 @@ export default {
   },
   data() {
     return {
-      isCollapsed: false,
+      isCollapsed: true,
     };
   },
   methods: {
-    toggleSidebar() {
+    toggleSidebar(){
       this.isCollapsed = !this.isCollapsed;
-    },
+    }
   },
 };
 </script>

@@ -1,5 +1,5 @@
 <template>
-        <div id="sidebar" class="bg-dark" :class="{ collapsed: collapsed }">
+        <div id="sidebar" class="bg-dark" :class="{ collapsed: this.collapsed }">
           <h4 class="p-3">Menu</h4>
           <nav class="nav flex-column">
             <a class="nav-link" href="#">Home</a>
@@ -24,8 +24,13 @@ export default {
   props: {
     collapsed: {
       type: Boolean,
-      default: true,
+      default: false,
     },
+  },
+  methods: {
+    toggleSidebar() {
+      this.collapsed = !this.collapsed;
+    }
   },
 };
 </script>
