@@ -1,5 +1,5 @@
 <template>
-        <div id="sidebar" class="bg-dark d-flex flex-column" :class="{ collapsed: collapsed }">
+        <div id="sidebar" class="bg-dark" :class="{ collapsed: collapsed }">
           <h4 class="p-3">Menu</h4>
           <nav class="nav flex-column">
             <a class="nav-link" href="#">Home</a>
