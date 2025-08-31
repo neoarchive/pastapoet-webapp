@@ -7,9 +7,9 @@
         <!-- Title Bar -->
         <div class="d-flex justify-content-between align-items-center mb-4 title-bar">
           <h2 class="fw-bold mb-0">Menu</h2>
-          <button class="btn btn-outline-dark btn-sm">
+          <router-link to="/cart" class="btn btn-outline-dark btn-sm">
             <i class="fas fa-shopping-cart"></i>
-          </button>
+          </router-link>
         </div>
 
         <!-- Pasta Carousel -->
