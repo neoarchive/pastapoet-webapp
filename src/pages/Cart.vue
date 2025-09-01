@@ -71,9 +71,6 @@ import { ref, reactive, computed } from 'vue'
 import { useCartStore } from '@/store'
 
 const cart = useCartStore()
-cart.addItem(
-  { name: "Pasta OB", price: 20.00 },
-)
 const showCart = ref(true)
 const cartItems = ref([
         { name: "Pasta 1", price: 12.5 },

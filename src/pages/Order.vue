@@ -9,8 +9,8 @@
           <h2 class="fw-bold mb-0">Menu</h2>
           <router-link to="/cart" class="btn btn-outline-dark btn-sm position-relative">
             <i class="fas fa-shopping-cart"></i>
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-               3
+            <span v-if="cart.totalItems > 0" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+               {{  cart.totalItems }}
             </span>
           </router-link>
         </div>
@@ -212,7 +212,10 @@
 </template>
 
 <script setup>
+import { useCartStore } from '@/store';
 import pastaImg from '@/assets/pasta1.jpg';
+
+const cart = useCartStore()
 </script>
 
 <style scoped>
