@@ -52,56 +52,32 @@
   </section>
 </template>
 
-<script>
-export default {
-  name: 'Contact',
-  data() {
-    return {
-      form: {
-        name: '',
-        email: '',
-        message: ''
-      },
-      successMessage: ''
-    }
-  },
-  methods: {
-    submitForm() {
-      // Here you can add actual submission logic via API or email service
-      console.log('Form submitted:', this.form)
-      
-      // Clear the form
-      this.form.name = ''
-      this.form.email = ''
-      this.form.message = ''
-      
-      // Show success message
-      this.successMessage = 'Thank you! Your message has been sent.'
-      
-      // Hide message after 3 seconds
-      setTimeout(() => {
-        this.successMessage = ''
-      }, 3000)
-    }
-  }
+
+<script setup>
+import { reactive, ref } from 'vue'
+
+const form = reactive({
+  name: '',
+  email: '',
+  message: ''
+})
+
+const successMessage = ref('')
+
+function submitForm() {
+  console.log('Form submitted:', form)
+
+  // Clear the form
+  form.name = ''
+  form.email = ''
+  form.message = ''
+
+  // Show success message
+  successMessage.value = 'Thank you! Your message has been sent.'
+
+  // Hide message after 3 seconds
+  setTimeout(() => {
+    successMessage.value = ''
+  }, 3000)
 }
 </script>
-
-<style scoped>
-.contact h2 {
-  font-family: 'Poppins', sans-serif;
-}
-
-.contact form {
-  background-color: #fff;
-}
-
-.contact input,
-.contact textarea {
-  font-family: 'Poppins', sans-serif;
-}
-
-.contact button {
-  font-family: 'Poppins', sans-serif;
-}
-</style>

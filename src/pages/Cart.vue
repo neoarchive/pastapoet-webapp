@@ -104,52 +104,6 @@ function submitOrder(){
 }
 </script>
 
-<!---
-<script>
-export default {
-  name: "CartPage",
-  setup() {
-    const cart = useCartStore()
-    return { cart }
-  },
-  data() {
-    return {
-      showCart: true,
-      cartItems: [
-        { name: "Pasta 1", price: 12.5 },
-        { name: "Dessert 2", price: 6.0 },
-        { name: "Soup 3", price: 8.75 },
-      ],
-      form: {
-        name: "",
-        phone: "",
-        address: "",
-      },
-    };
-  },
-  computed: {
-    totalPrice() {
-      return this.cartItems.reduce((sum, item) => sum + item.price, 0);
-    },
-  },
-  methods: {
-    toggleSection() {
-      this.showCart = !this.showCart;
-    },
-    removeItem(index) {
-      this.cartItems.splice(index, 1);
-    },
-    submitOrder() {
-      alert(`Order placed for ${this.form.name}!`);
-      this.form = { name: "", phone: "", address: "" };
-      this.cartItems = [];
-      this.showCart = true;
-    },
-  },
-};
-</script>
--->
-
 <style scoped>
 .cart-card {
   border-radius: 12px;

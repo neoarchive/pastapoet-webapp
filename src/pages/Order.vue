@@ -209,7 +209,7 @@
 </template>
 
 <script setup>
-import pastaImg from '../assets/pasta1.jpg';
+import pastaImg from '@/assets/pasta1.jpg';
 </script>
 
 <style scoped>
