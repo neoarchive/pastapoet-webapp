@@ -16,7 +16,7 @@
           <div v-if="showCart">
             <div
               class="d-flex justify-content-between align-items-center mb-3 border-bottom pb-2"
-              v-for="(item, index) in cartItems"
+              v-for="(item, index) in cart.items"
               :key="index"
             >
               <div>
@@ -32,7 +32,7 @@
 
             <div class="d-flex justify-content-between fw-bold mt-3">
               <span>Total</span>
-              <span>${{ totalPrice.toFixed(2) }}</span>
+              <span>${{ cart.totalPrice.toFixed(2) }}</span>
             </div>
 
             <div class="text-end mt-3">
@@ -68,7 +68,12 @@
 
 <script setup>
 import { ref, reactive, computed } from 'vue'
+import { useCartStore } from '@/store'
 
+const cart = useCartStore()
+cart.addItem(
+  { name: "Pasta OB", price: 20.00 },
+)
 const showCart = ref(true)
 const cartItems = ref([
         { name: "Pasta 1", price: 12.5 },
@@ -91,7 +96,7 @@ function toggleSection(){
 }
 
 function removeItem(index){
-  cartItems.value.splice(index, 1)
+  cart.removeItem(index)
 }
 
 function submitOrder(){
