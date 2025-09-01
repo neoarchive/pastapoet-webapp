@@ -283,4 +283,15 @@ import pastaImg from '@/assets/pasta1.jpg';
   font-weight: 600;          /* semi-bold */
 }
 
+/* Let clicks pass through the big control area… */
+.carousel-control-prev,
+.carousel-control-next {
+  pointer-events: none;
+}
+
+/* …but keep the actual arrow icons clickable */
+.carousel-control-prev .carousel-control-prev-icon,
+.carousel-control-next .carousel-control-next-icon {
+  pointer-events: auto;
+}
 </style>
