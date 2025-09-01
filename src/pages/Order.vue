@@ -7,8 +7,11 @@
         <!-- Title Bar -->
         <div class="d-flex justify-content-between align-items-center mb-4 title-bar">
           <h2 class="fw-bold mb-0">Menu</h2>
-          <router-link to="/cart" class="btn btn-outline-dark btn-sm">
+          <router-link to="/cart" class="btn btn-outline-dark btn-sm position-relative">
             <i class="fas fa-shopping-cart"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+               3
+            </span>
           </router-link>
         </div>
 
