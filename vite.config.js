@@ -21,8 +21,22 @@ export default defineConfig({
         icons: [
           { src: '/icon-192x192.png', sizes: '192x192', type: 'image/png' },
           { src: '/icon-512x512.png', sizes: '512x512', type: 'image/png' }
-        ]
-      }
+        ],
+        screenshots: [
+          {
+            src: "/screenshot-desktop.png",
+            sizes: "1920x1080",
+            type: "image/png",
+            form_factor: "wide"
+          },
+          {
+            src: "/screenshot-mobile.png",
+            sizes: "360x800",
+            type: "image/png"
+          }
+        ],
+      },
+
     }),
   ],
   resolve: {
