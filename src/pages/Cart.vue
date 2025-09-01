@@ -66,9 +66,52 @@
   </section>
 </template>
 
+<script setup>
+import { ref, reactive, computed } from 'vue'
+
+const showCart = ref(true)
+const cartItems = ref([
+        { name: "Pasta 1", price: 12.5 },
+        { name: "Dessert 2", price: 6.0 },
+        { name: "Soup 3", price: 8.75 },
+])
+const form = reactive({
+  name: "",
+  phone: "",
+  address: "",
+})
+
+const totalPrice = computed(() =>
+  cartItems.value.reduce((sum, item) => sum + item.price, 0)
+)
+
+
+function toggleSection(){
+  showCart.value = !showCart.value
+}
+
+function removeItem(index){
+  cartItems.value.splice(index, 1)
+}
+
+function submitOrder(){
+  alert('Order placed')
+  form.name = ""
+  form.phone = ""
+  form.address = ""
+  cartItems.value = []
+  showCart.value = true
+}
+</script>
+
+<!---
 <script>
 export default {
   name: "CartPage",
+  setup() {
+    const cart = useCartStore()
+    return { cart }
+  },
   data() {
     return {
       showCart: true,
@@ -105,6 +148,7 @@ export default {
   },
 };
 </script>
+-->
 
 <style scoped>
 .cart-card {
