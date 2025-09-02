@@ -13,6 +13,8 @@ body {
   color: #fff;
   transition: all 0.3s;
   position: sticky;
+  top: 56px;              /* equal to navbar height */
+  height: calc(100vh - 56px); /* fill remaining viewport */
 }
 
 #sidebar .nav-link {
