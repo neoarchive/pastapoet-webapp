@@ -1,7 +1,7 @@
 <template>
         <div id="sidebar" class="nav-dark" :class="{ collapsed: this.collapsed }">
           <h4 class="p-3">Menu</h4>
-          <div class="nav-wrapper">
+          <div class="nav-wrapper sticky-nav">
             <nav class="nav flex-column">
               <router-link to="/" class="nav-link">Home</router-link>
               <router-link to="/order" class="nav-link">Order</router-link>
@@ -9,7 +9,7 @@
               <router-link to="/contact" class="nav-link">Contact</router-link>
             </nav>
           </div>
-          <div class='social-wrapper'>
+          <!-- <div class='social-wrapper'>
             <div class="sidebar-social mt-auto p-3 text-center">
               <a href="https://www.instagram.com/thepastapoetuk/" target="_blank" class="text-light me-3">
                 <i class="bi bi-instagram"></i>
@@ -18,7 +18,7 @@
                 <i class="fab fa-tiktok"></i>
               </a>
             </div>
-          </div>
+          </div> -->
         </div>
 </template>
 
@@ -47,6 +47,15 @@ export default {
   background: #111;
   color: #fff;
   transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.sticky-nav {
+  position: sticky;
+  top: 56px;
+  align-self: flex-start;
+  width: 100%;
 }
 
 #sidebar .nav-link {
