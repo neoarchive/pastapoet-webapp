@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 
-export const useCartStore = defineStore('cart', {
+const cartStore = defineStore('cart', {
     state: () => ({
         items: []
     }),
@@ -21,3 +21,22 @@ export const useCartStore = defineStore('cart', {
         }
     },
 })
+
+const generalStore = defineStore('other', {
+    state: () => ({
+        is_sidebar_collapsed: true
+    }),
+    getters: {
+        isCollapsed: (state) => state.is_sidebar_collapsed
+    },
+    actions: {
+        toggleSidebar(){
+            this.is_sidebar_collapsed = !this.is_sidebar_collapsed
+        }
+    }
+});
+
+export {
+    cartStore,
+    generalStore,
+}

@@ -1,11 +1,11 @@
 <template>
   <div id="app" class="d-flex flex-column min-vh-100">
     <!-- Navbar -->
-    <Navbar @toggle="toggleSidebar" />
+    <Navbar @toggle="ostore.toggleSidebar" />
 
     <div class="d-flex flex-grow-1">
       <!-- Sidebar -->
-      <Sidebar :collapsed="isCollapsed"></Sidebar>
+      <Sidebar :collapsed="ostore.isCollapsed"></Sidebar>
 
       <!-- Main Content -->
       <div id="content" class="p-4 flex-grow-1">
@@ -18,31 +18,15 @@
   </div>
 </template>
 
-<script>
-import Navbar from './components/Navbar.vue';
-import Sidebar from './components/Sidebar.vue';
-import Footer from './components/Footer.vue';
+<script setup>
+import { ref } from 'vue'
+import { generalStore } from '@/store'
+import Navbar from './components/Navbar.vue'
+import Sidebar from './components/Sidebar.vue'
+import Footer from './components/Footer.vue'
 
-export default {
-  name: "App",
-  components: {
-    Navbar,
-    Sidebar,
-    Footer,
-  },
-  data() {
-    return {
-      isCollapsed: true,
-    }
-  },
-  methods: {
-    toggleSidebar(){
-      this.isCollapsed = !this.isCollapsed;
-    }
-  },
-};
+const ostore = generalStore()
 </script>
-
 <style>
 @import "./style.css";
 </style>

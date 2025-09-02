@@ -68,9 +68,9 @@
 
 <script setup>
 import { ref, reactive, computed } from 'vue'
-import { useCartStore } from '@/store'
+import { cartStore } from '@/store'
 
-const cart = useCartStore()
+const cart = cartStore()
 const showCart = ref(true)
 const cartItems = ref([
         { name: "Pasta 1", price: 12.5 },

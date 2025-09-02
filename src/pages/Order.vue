@@ -212,10 +212,10 @@
 </template>
 
 <script setup>
-import { useCartStore } from '@/store';
+import { cartStore } from '@/store';
 import pastaImg from '@/assets/pasta1.jpg';
 
-const cart = useCartStore()
+const cart = cartStore()
 </script>
 
 <style scoped>
