@@ -1,6 +1,6 @@
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #d66ad4, #9c27b0);
+  background: linear-gradient(135deg, #160316, #9c27b0);
   color: #fff;
   overflow-x: hidden;
 }
@@ -12,6 +12,7 @@ body {
   background: #111;
   color: #fff;
   transition: all 0.3s;
+  position: sticky;
 }
 
 #sidebar .nav-link {

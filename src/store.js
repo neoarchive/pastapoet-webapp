@@ -32,6 +32,9 @@ const generalStore = defineStore('other', {
     actions: {
         toggleSidebar(){
             this.is_sidebar_collapsed = !this.is_sidebar_collapsed
+        },
+        hideSidebar(){
+            this.is_sidebar_collapsed = true
         }
     }
 });

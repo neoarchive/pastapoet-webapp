@@ -9,7 +9,10 @@
 
       <!-- Main Content -->
       <div id="content" class="p-4 flex-grow-1">
-        <transition name='fade' mode="out-in">
+        <transition 
+          @after-leave="onAfterLeave"
+          name='fade' mode="out-in"
+        >
           <router-view></router-view>
         </transition>
         <Footer />
@@ -26,6 +29,10 @@ import Sidebar from './components/Sidebar.vue'
 import Footer from './components/Footer.vue'
 
 const ostore = generalStore()
+
+function onAfterLeave(el){
+  ostore.hideSidebar()
+}
 </script>
 <style>
 @import "./style.css";
