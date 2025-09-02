@@ -5,65 +5,10 @@ body {
   overflow-x: hidden;
 }
 
-/* Sidebar */
-#sidebar {
-  min-width: 250px;
-  max-width: 250px;
-  background: #111;
-  color: #fff;
-  transition: all 0.3s;
-  position: sticky;
-  top: 56px;              /* equal to navbar height */
-  height: calc(100vh - 56px); /* fill remaining viewport */
-}
-
-#sidebar .nav-link {
-  color: #ddd;
-  padding: 15px;
-}
-
-#sidebar .nav-link:hover {
-  background: #9c27b0;
-  color: #fff;
-}
-
-/* Collapsed Sidebar */
-#sidebar.collapsed {
-  margin-left: -250px;
-  transform: translateX(-100%);
-}
-
-.sidebar-social a {
-  font-size: 1.5rem;
-  transition: color 0.3s ease;
-}
-
-.sidebar-social a:hover {
-  color: #f8d24f; /* example highlight color */
-}
-
 /* Content */
 #content {
   flex: 1;
   padding: 20px;
-}
-
-/* Navbar */
-.navbar {
-  background: #111;
-}
-
-.navbar-brand {
-  font-weight: 600;
-  color: #fff !important;
-}
-
-.toggle-btn {
-  background: #9c27b0;
-  border: none;
-  color: #fff;
-  padding: 8px 12px;
-  border-radius: 5px;
 }
 
 /* Cards */

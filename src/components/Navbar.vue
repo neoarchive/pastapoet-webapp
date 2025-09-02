@@ -12,3 +12,24 @@ defineOptions({
   name: 'Navbar'
 })
 </script>
+
+<style>
+
+/* Navbar */
+.navbar {
+  background: #111;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  color: #fff !important;
+}
+
+.toggle-btn {
+  background: #9c27b0;
+  border: none;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+</style>
