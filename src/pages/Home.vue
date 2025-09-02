@@ -4,7 +4,7 @@
       <PastaCarousel :slides="pastaSlides" />
       <AboutSection />
     </div>
-  </template>
+</template>
   
 <script setup>
 import Hero from '@/components/Hero.vue'
