@@ -49,6 +49,9 @@ export default {
   transition: all 0.3s;
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  top: 0;
+  position: sticky;
 }
 
 .sticky-nav {
